@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 40px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #c23b2f;
+}
+
+.section-home {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ff9a8b);
+    color: white;
+}
+
+.section-home .slider img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.intro h2 {
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.btn-booking {
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #ff6f61;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn-booking:hover {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.section-about,
+.section-menu,
+.section-reviews,
+.section-booking,
+.section-contact {
+    padding: 80px 50px;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-menu ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.section-menu ul li {
+    display: inline-block;
+    margin: 15px 30px;
+}
+
+.section-menu ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid #ff6f61;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.section-menu ul li a:hover {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.section-gallery .gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.section-gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.section-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: #f0f0f0;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form button {
+    margin: 15px 0;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: white;
+}
+
+form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e55b4d;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Респонсивность для экранов 1920x1080 */
+@media (max-width: 1920px) {
+    .section-home {
+        padding: 80px 20px;
+    }
+
+    .section-home .slider img {
+        height: 400px;
+    }
+
+    .intro h2 {
+        font-size: 48px;
+    }
+
+    .intro p {
+        font-size: 22px;
+    }
+
+    .btn-booking {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .section-about,
+    .section-menu,
+    .section-reviews,
+    .section-booking,
+    .section-contact {
+        padding: 60px 50px;
+    }
+
+    .section-menu ul li {
+        margin: 15px 25px;
+    }
+
+    .section-gallery img {
+        width: 25%;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .section-home {
+        padding: 60px 20px;
+    }
+
+    .section-home .slider img {
+        height: 300px;
+    }
+
+    .intro h2 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .btn-booking {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .section-menu ul {
+        text-align: center;
+    }
+
+    .section-menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .section-gallery img {
+        width: 45%;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+    }
+
+    .review {
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* Описание секции О нас */
+.section-about {
+    padding: 80px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-about h2 {
+    font-size: 46px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-about p {
+    font-size: 28px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для экранов среднего размера */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-image img {
+        border-radius: 10px;
+    }
+}
+
+
+
+/* Стили для раздела меню */
+.section-menu {
+    padding: 80px 50px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.section-menu h2 {
+    font-size: 46px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.menu-category {
+    flex: 1;
+    max-width: 23%;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-category:hover {
+    transform: scale(1.05);
+}
+
+.menu-category h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h4 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 26px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card-content span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Адаптивность для экранов среднего размера */
+@media (max-width: 1024px) {
+    .menu-category {
+        max-width: 45%;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .menu-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-category {
+        max-width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+/* Стили для раздела галереи */
+.section-gallery {
+    padding: 80px 50px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.section-gallery h2 {
+    font-size: 46px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Адаптивность для экранов среднего размера */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* Стили для раздела отзывов */
+.section-reviews {
+    padding: 80px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.section-reviews h2 {
+    font-size: 46px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Стили для каждой карточки отзыва */
+.review-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.reviewer-info h4 {
+    font-size: 28px;
+    color: #333;
+}
+
+.reviewer-info .review-date {
+    font-size: 24px;
+    color: #777;
+}
+
+.review-text {
+    font-size: 26px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    font-size: 28px;
+    color: #ff6f61;
+}
+
+/* Адаптивность для экранов среднего размера */
+@media (max-width: 1024px) {
+    .reviews-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+}
+.contact-css{
+    font-size: 30px;
+    color: #333;
+}
